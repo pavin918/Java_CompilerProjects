@@ -1,0 +1,184 @@
+array x:int[5][5];
+var num: int;
+var gai : int;
+var gbi : int;
+var gbf : float;
+var gaf : float;
+
+func changearray() : void {
+	var done: bool;
+	let done = false;
+	
+	var col: int;
+	let col = 0;
+	
+	var row: int;
+	let row = 0;
+	
+	let num = 0;
+	
+	
+	while (not done)
+	{
+		let x[row][col] = num;
+		
+		let num = num + 1;
+		
+		let col = col + 1;
+		
+		
+		if (col == 3)
+		{
+			let col = 0;
+			let row = row + 1;
+		}
+		if (row == 3)
+		{
+			let done = true;
+		}
+
+	}
+}
+
+func add1(a: int, b:int, c:int) : int
+{
+	return a + b + c;
+}
+
+func sub1(a: int, b:int, c:int) : int
+{
+	return a - b - c;
+}
+
+func mul1(a: int, b:int, c:int) : int
+{
+	return a * b * c;
+}
+
+func div1(a: int, b:int, c:int) : int
+{
+	return a / b / c;
+}
+
+func add2(a: float, b:float, c:float) : float
+{
+	return a + b + c;
+}
+
+func sub2(a: float, b:float, c:float) : float
+{
+	return a - b - c;
+}
+
+func mul2(a: float, b:float, c:float) : float
+{
+	return a * b * c;
+}
+
+func div2(a: float, b:float, c:float) : float
+{
+	return a / b / c;
+}
+
+
+func bools() : void {
+	::printBool(gai > gbi);
+	::println();
+	::printBool(gai >= gbi);
+	::println();
+	::printBool(gai < gbi);
+	::println();
+	::printBool(gai <= gbi);
+	::println();
+	::printBool(gai == gbi);
+	::println();
+	::printBool(gai != gbi);
+	
+	::println();
+	::println();
+	::printBool(gaf > gbf);
+	::println();
+	::printBool(gaf >= gbf);
+	::println();
+	::printBool(gaf < gbf);
+	::println();
+	::printBool(gaf <= gbf);
+	::println();
+	::printBool(gaf == gbf);
+	::println();
+	::printBool(gaf != gbf);
+	::println();
+}
+
+func main() : void {
+
+	var inner: int;
+	var outer: int;
+	
+	::changearray();
+	
+	let inner = 0;
+	let outer = 0;
+	while (outer < 5) {
+		while (inner < 5) { 
+			::printInt(x[inner][outer]);
+			let inner = inner + 1;
+		}
+     ::println();
+    let inner = 0;
+    let outer = outer + 1;
+	}
+	::println();
+	::println();
+	
+	var a_int: int;
+	var b_int: int;
+	var c_int: int;
+	
+	var a_float: float;
+	var b_float: float;
+	var c_float: float;
+	
+	let a_int = 150;
+	let b_int = 50;
+	let c_int = 30;
+	
+	let a_float = 25.0;
+	let b_float = 4.0;
+	let c_float = 5.786097;
+	
+	::printInt(::add1(a_int, b_int, c_int));
+	::println();
+	::printInt(::sub1(a_int, b_int, c_int));
+	::println();
+	::printInt(::mul1(a_int, b_int, c_int));
+	::println();
+	::printInt(::div1(a_int, b_int, c_int));
+	::println();
+	::printFloat(::add2(a_float, b_float, c_float));
+	::println();
+	::printFloat(::sub2(a_float, b_float, c_float));
+	::println();
+	::printFloat(::mul2(a_float, b_float, c_float));
+	::println();
+	::printFloat(::div2(a_float, b_float, c_float));
+	::println();
+	::println();
+	::printInt(::mul1(4,5,6));
+	::println();
+	::printFloat(::mul2(1.5, 1.5, 4.0));
+	
+	let gai = 2;
+	let gbi = 1;
+	let gaf = 2.0;
+	let gbf = 1.0;
+	
+	::bools();
+	
+	let gbi = 2;
+	let gbf = 2.0;
+	
+	::bools();
+	
+	
+}

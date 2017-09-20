@@ -1,0 +1,25 @@
+// test lt comparison
+
+func bile(a:int, b:int) : bool {
+  return a < b;
+}
+
+// test floating point comparison
+
+func bfle(a:float, b:float) : bool {
+  return a < b;
+}
+
+func main() : void {
+  ::printBool(::bile(1,2));
+  ::println();
+  ::printBool(::bile(2,1));
+  ::println();
+  ::printBool(::bile(1,1));
+  ::println();
+  ::printBool(::bfle(1.0, 2.0));
+  ::println();
+  ::printBool(::bfle(2.0, 1.0));
+  ::println();
+  ::printBool(::bfle(1.0, 1.0));
+}

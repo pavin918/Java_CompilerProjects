@@ -1,0 +1,23 @@
+// test logical not
+func myTrue() : bool {
+  ::printInt(1);
+  ::println();
+  return true;
+}
+
+func myFalse() : bool {
+  ::printInt(0);
+  ::println();
+  return false;
+}
+
+func main() : void {
+  ::printBool(not ::myTrue());
+  ::println();
+  ::printBool(not (not ::myTrue()));
+  ::println();
+  ::printBool(not ::myFalse());
+  ::println();
+  ::printBool(not (not ::myFalse()));
+  ::println();
+}

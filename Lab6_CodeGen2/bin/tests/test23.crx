@@ -1,0 +1,23 @@
+// test logical or
+func myTrue() : bool {
+  ::printInt(1);
+  ::println();
+  return true;
+}
+
+func myFalse() : bool {
+  ::printInt(0);
+  ::println();
+  return false;
+}
+
+func main() : void {
+  ::printBool(::myTrue() or ::myTrue());
+  ::println();
+  ::printBool(::myFalse() or ::myTrue());
+  ::println();
+  ::printBool(::myTrue() or ::myFalse());
+  ::println();
+  ::printBool(::myFalse() or ::myFalse());
+  ::println();
+}

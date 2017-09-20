@@ -1,0 +1,19 @@
+// test arithmetic operations
+
+func main() : void {
+  ::printInt(1+2);
+  ::println();
+  ::printFloat( 0.5-0.125);
+  ::println();
+  ::printInt(2-5);
+  ::println();
+  ::printFloat( 0.5+0.125);
+  ::println();
+  ::printInt(8*9);
+  ::println();
+  ::printFloat( 0.5*0.125);
+  ::println();
+  ::printInt(5/2);
+  ::println();
+  ::printFloat( 0.5/0.125);
+}
